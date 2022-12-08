@@ -2,9 +2,6 @@ from database.Database import Database
 from pymongo import MongoClient
 
 
-# repository pattern cekcen buraya
-
-
 class MongoDB(Database):
     __db = None
 
