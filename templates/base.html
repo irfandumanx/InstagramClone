@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='photos/icon.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='photos/icon.png') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/normalize.css"/>
+    <style>
+        #loading {
+            background-color: white;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1010;
+        }
+    </style>
+    <title>Instagram CLONE</title>
+</head>
+<body>
+    <overlay id="loading"></overlay>
+    {% block content %}
+
+    {% endblock %}
+</body>
+<script>
+    const right = document.querySelector(".right");
+    window.onload=function() {
+        document.getElementById('loading').style.display='none';
+        if(right !== null) {
+            right.scrollTo(0, right.scrollHeight);
+        }
+    }
+</script>
+</html>

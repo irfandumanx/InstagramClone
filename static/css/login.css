@@ -1,0 +1,137 @@
+.container {
+    margin: auto;
+    background-color: red;
+    width: 800px;
+}
+
+.top {
+    background-color: white;
+    width: 800px;
+    height: 100px;
+    text-align: center;
+}
+
+.left {
+    background-color: white;
+    width: 100px;
+    height: 400px;
+    float: left;
+    text-align: center;
+}
+
+.center {
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    float: left;
+    text-align: center;
+}
+
+.right {
+    background-color: white;
+    width: 100px;
+    height: 400px;
+    float: right;
+    text-align: center;
+
+}
+
+.footer {
+    background-color: white;
+    width: 800px;
+    height: 150px;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+
+
+}
+
+.kutu1 {
+    background-color: white;
+    width: 300px;
+    height: 360px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.kutu1:hover {
+    --angle: 0deg;
+    border-image: linear-gradient(var(--angle), rgb(223, 12, 12), rgb(8, 133, 187)) 1;
+    animation: 2s rotate linear infinite;
+}
+
+@import url(//fonts.googleapis.com/css?family=Lato:100,300,300i,400);
+
+
+button {
+    display: inline;
+    background: #01A4E0;
+    color: #2184AC;
+    border: 0;
+    padding: 4px;
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    width: 180px;
+    height: 30px;
+    margin-top: 1.0em;
+    padding: 4px;
+}
+
+small {
+    display: inline-block;
+    margin-top: 5px;
+    color: white;
+    font-size: 100%;
+    color: #fff;
+}
+
+
+
+
+
+#btn-login {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin-top: 2.0em;
+    border-radius: 4px;
+    background-color: #3366cc;
+    color: #fff;
+}
+
+#btn-forgot {
+    display: block;
+    width: 200px;
+    margin-top: 1.0em;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #000D36;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 96, 128);
+}

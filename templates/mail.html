@@ -1,0 +1,25 @@
+{% block content %}
+    <div style="display: none" class="mail-container">
+        <div class="mail-content">
+            {% if isValidate %}
+                <div class="validate">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span class="validate-text">Mail değiştirme işlemi tamamlandı.</span>
+                </div>
+            {% else %}
+                <div class="not-validate">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <span class="not-validate-text">Mail değiştirme işlemi tamamlanamadı.</span>
+                </div>
+            {% endif %}
+        </div>
+        <svg style="cursor: pointer" id="close-button" color="#ffffff" fill="#ffffff" height="18" role="img" viewBox="0 0 24 24" width="18"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+    </div>
+    {% include "settings.html" %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mail.css')}}"/>
+    <script>
+        const mailContainer = document.querySelector(".mail-container");
+        mailContainer.style.display = "block";
+        closeButton.onclick = () => mailContainer.remove();
+    </script>
+{% endblock %}

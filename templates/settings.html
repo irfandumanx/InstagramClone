@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    {% include "includes/navbar.html" %}
+    <div style="display: none" class="profile-photo">
+        <div class="profile-photo-container">
+            <div class="ppt profile-photo-text">Profil Fotoğrafını Değiştir</div>
+            <input style="display: none" type="file" id="file" name="file">
+            <label for="file" class="ppt profile-photo-upload">Fotoğraf Yükle</label>
+            <div class="ppt profile-photo-delete">Mevcut Fotoğrafı Kaldır</div>
+            <div class="ppt profile-photo-cancel">İptal</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li>
+                    <div id="profile-change" class="settings-property-name">
+                        <span class="property-name-style">Profili düzenle</span>
+                    </div>
+                    <div id="password-change" class="settings-property-name">
+                        <span class="property-name-style">Şifre değiştir</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div id="settings-error"></div>
+            <form id="settings-form" method="post">
+            </form>
+        </div>
+    </div>
+    <script>
+        let user_ = {{user | safe}}
+        let image_ = {{image | safe}}
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/settings.css')}}"/>
+    <script src="/static/js/Settings.js"></script>
+{% endblock %}

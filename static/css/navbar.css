@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navigation {
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid rgba(219, 219, 219, 1);
+    position: fixed;
+}
+
+#content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    height: 60px;
+}
+
+#instagram {
+    font-family: 'Great Vibes', cursive;
+    height: 100%;
+    font-size: 32px;
+    line-height: 65px;
+}
+
+#searchWrapper {
+    margin: auto 0;
+    margin-left: 60px;
+}
+
+#searchDiv {
+    padding: 0 16px;
+    display: flex;
+    margin-left: 10px;
+    background: rgba(239, 239, 239, 1);
+    height: 36px;
+    width: 268px;
+    border-radius: 8px;
+}
+
+.fa-search {
+    margin: auto 0;
+    margin-right: 6px;
+    height: 16px;
+    width: 16px;
+}
+
+#search {
+    margin: auto 0;
+    background: rgba(239, 239, 239, 1);
+    padding: 6px;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 236px;
+    font-size: 16px;
+  }
+
+#userBar {
+    user-select: none;
+    display: flex;
+    margin: auto 0;
+}
+
+#home {
+    margin-left: -30px;
+}
+
+.homeIcon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+#user {
+    margin-left: 4px;
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    height: 24px;
+    width: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dropdown::after{
+    content: "";
+    position: absolute;
+    left: 204px;
+    top: -8px;
+    background: white;
+    border-top: .7px outset rgba(0,0,0,.0975);
+    border-left: .7px outset rgba(0,0,0,.0975);
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+}
+
+#dropdown-wrapper {
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+    top: 40px;
+    left: -200px;
+    position: absolute;
+    background: white;
+    box-shadow:0 0 5px 1px rgba(0,0,0,.0975);
+    width: 240px;
+    height: 160px;
+}
+
+.dropdown {
+    display: flex;
+    width: 240px;
+    height: 40px;
+    padding: 10px 10px 10px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+#logout {
+    border-top: 1px solid rgba(0,0,0,.0975);
+}
+.fa-plus-square {
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    display: block;
+    margin-left: -3px;
+    margin-top: -1px;
+    margin-right: 10px;
+}
+
+.fa-plus-square {
+    cursor: pointer;
+}
+
+.fa-comments {
+    cursor: pointer;
+}

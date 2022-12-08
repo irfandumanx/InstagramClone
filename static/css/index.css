@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(250,250,250,1);
+}
+
+#left {
+    margin-top: 80px;
+    width: 620px;
+}
+
+#right {
+    margin-top: 80px;
+    width: 300px;
+    /*background: blue;*/
+}
+
+#stories {
+    display: flex;
+    border-radius: 5px;
+    width: 100%;
+    height: 90px;
+    box-shadow:0 0 5px 1px rgba(0,0,0,.0975);
+}
+
+.story {
+    border: 1px solid black;
+    position: relative;
+    margin: 15px 0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin-left: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 24px;
+}
+
+h6 {
+    color: rgba(142,142,142,1);
+    font-weight: 400;
+    width: 100px;
+    position: absolute;
+    top: 48px;
+    left: -8px;
+}
+
+.post {
+    margin-top: 30px;
+    width: 620px;
+    height: 1080px;
+    box-shadow:0 0 5px 1px rgba(0,0,0,.0975);
+}
+
+.user-content {
+    position: relative;
+    display: flex;
+    box-shadow:0 0 5px 1px rgba(0,0,0,.0975);
+    width: 100%;
+    height: 70px;
+}
+
+#user-photo {
+    display: inline-block;
+    margin: auto 0;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-left: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#user-info {
+    margin: 18px 0;
+    margin-left: 24px;
+}
+
+.fa-ellipsis-h {
+    font-size: 30px;
+    position: absolute;
+    left: 570px;
+    top: 20px;
+}
+
+#post-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    height: 780px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#post-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    height: 780px;
+}
+
+.fa-play {
+    cursor: pointer;
+    font-size: 160px;
+    color:rgba(255, 255, 255, 0.7);
+ }
+
+#action {
+    position: relative;
+    height: 40px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.icon {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.fa-comment-o {
+    top: -2px;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+#like {
+    cursor: pointer;
+}
+
+#unlike {
+    cursor: pointer;
+}
+#likes {
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#comments {
+    margin-top: 16px;
+}
+
+#drop-area {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 100000;
+    border: 2px dashed rgb(0, 0, 0);
+    font-family: sans-serif;
+    border-radius: 20px;
+    user-select: none;
+    -webkit-user-select: none; /* Safari fallback only */
+
+}
+
+#photo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#drop-area.highlight {
+    border-color: rgb(0, 2, 125);
+}
+
+.button {
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button:hover {
+    background: #ddd;
+}
+
+.button.highlight {
+    background: #ddd;
+}
+
+#file {
+    display: none;
+}
+
+#fileLabel {
+    display: block;
+    margin-top: 15px;
+}
+
+.fa-upload {
+    font-size: 120px;
+    color: #2b60ff;
+    cursor: pointer;
+}
+
+.fa-check {
+    font-size: 120px;
+    color: #0044ff;
+    cursor: pointer;
+}
+
+.photo-text {
+    margin-top: 10px;
+}
+
+.types {
+    width: calc(100% - 80px);
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#uploadButton {
+    color: white;
+    background: #00bfff;
+    margin-top: 10px;
+}

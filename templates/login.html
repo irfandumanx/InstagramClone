@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="top"></div>
+        <div style="display: none; color: white; background: crimson; height: 30px; margin-top: -50px; min-width: 800px; line-height: 30px; text-align:center; position:absolute; " id="error-message"></div>
+        <div class="left"></div>
+        <div class="center">
+            <div class="kutu1">
+                <p style="font-family:Cursive">İnstagram</p>
+                <div class="outer-box">
+                    <div class="login-box">
+
+                        <center>
+                            <input type="text" id="username_or_email" placeholder="Kullanıcı Adı veya Email">
+                            <input type="password" id="password" placeholder="Şifre">
+
+                            <button id="btn-login">Giriş Yap</button>
+                            <button id="btn-forgot">Şifremi unuttum!</button>
+                            <font size="2px">Hesabın yok mu? <a href="register"><b>Kaydol</b></a></font>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right"></div>
+        <div class="footer">
+            <font size="2px">Giris yapınız.</font>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css"/>
+    <script src="/static/js/Login.js"></script>
+{% endblock %}

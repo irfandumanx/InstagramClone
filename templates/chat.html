@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    <video id="remoteVideo" style="display: none;" autoplay playsinline></video>
+    <div class="container">
+        {% include "includes/navbar.html" %}
+        <div class="innerContainer">
+            <div class="left">
+                <div class="msg-information">
+                    <div></div>
+                    <span class="username">{{user.username}}</span>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </div>
+                {% for chat in chatHtml %}
+                    <div class="content" chat-id="{{chat.chatID}}">
+                        <div class="flex-r">
+                            <div class="photo" style="background-image: url('data:image/{{chat.image.extension}};base64,{{chat.image.src}}');"></div>
+                            <div class="flex-c">
+                                <span class="name">{{chat.username}}</span>
+                                <div class="message-container">
+                                    <div class="lastMessage">{{chat.lastMessage}}</div>
+                                    <span class="time-out">
+                                        {% if chat.time != None %}
+                                            · {{chat.time}}d
+                                        {% endif  %}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="right-container">
+               {% block innermsg %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <script>
+    let user_ = '{{user._id}}'
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat.css')}}"/>
+    <script src="/static/js/Chat.js"></script>
+{% endblock %}

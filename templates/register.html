@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="top"></div>
+        <div style="display: none; color: white; background: crimson; height: 30px; margin-top: -50px; min-width: 800px; line-height: 30px; text-align:center; position:absolute; " id="error-message"></div>
+        <div class="left"></div>
+        <div class="center">
+            <div class="kutu1">
+                <p style="font-family:Cursive">İnstagram</p>
+                <p style="font-size:14px ; font-family:Fantasy; color: rgb(72, 68, 68);">Arkadaşlarının fotoğraf ve videolarını görmek için kaydol.</p>
+                <div class="outer-box">
+                    <div class="login-box">
+                        <center>
+                            <input type="text" id="mail" placeholder="E-posta">
+                            <input type="text" id="name" placeholder="Adı Soyadı">
+                            <input type="text" id="username" placeholder="Kullanıcı Adı">
+                            <input type="password" id="password" placeholder="Şifre">
+                            <button id="btn-login">Kaydol</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right"></div>
+        <div class="footer">
+            <font size="2px">Hesabın var mı?  <a href="login"><b>Giriş Yap</b></a></font>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+    <script src="/static/js/Register.js"></script>
+{% endblock %}
+

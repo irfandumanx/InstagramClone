@@ -1,0 +1,59 @@
+#close-button {
+    float: right;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+.mail-container {
+    position: absolute;
+    z-index: 1001;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+}
+
+.mail-content {
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+    width: 360px;
+    background: whitesmoke;
+}
+
+.fa-times {
+    font-size: 40px;
+    color: rgba(169, 43, 43, 0.87);
+}
+
+.not-validate-text {
+    color: rgb(166, 13, 55);
+    margin-left: 12px;
+}
+
+.not-validate {
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-check {
+    font-size: 40px;
+    color: rgba(57, 143, 47, 0.87);
+}
+
+.validate-text {
+    color: rgb(44, 100, 37);
+    margin-left: 12px;
+}
+
+.validate {
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}

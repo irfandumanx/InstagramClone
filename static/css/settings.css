@@ -1,0 +1,223 @@
+:root {
+  --box_margin: 90px;
+  --box_height: 480px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: block;
+    margin-top: var(--box_margin);
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 3px 0 0 3px;
+    width: 200px;
+    height: var(--box_height);
+}
+
+.right {
+    display: block;
+    margin-top: var(--box_margin);
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+    width: 640px;
+    height: var(--box_height);
+}
+
+#settings-error {
+    display: none;
+    margin: 0 auto;
+    width: 300px;
+    height: 30px;
+    color: red;
+    line-height: 48px;
+    text-align: center;
+}
+
+.settings-property-name {
+    cursor: pointer;
+    width: 200px;
+    min-height: 60px;
+}
+
+.settings-property-name.active {
+    border-left: 2px solid #262626;
+}
+
+.settings-property-name:hover {
+    border-left: 2px solid grey;
+}
+
+.settings-property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 640px;
+    height: var(--box_height);
+}
+
+.property-name-style {
+    font-family: var(--font);
+    width: 200px;
+    height: 60px;
+    margin-left: 30px;
+    line-height: 60px;
+}
+
+.property-text {
+    font-family: var(--font);
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.property-container-name {
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 14px;
+    height: 36px;
+    min-width: 100px;
+    line-height: 36px;
+    text-align: right;
+}
+
+.property-container {
+    display: flex;
+    width: 420px;
+    height: 120px;
+    margin-bottom: 20px;
+    margin-left: -45px;
+}
+
+.property-input {
+    height: 36px;
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.property-container-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 36px;
+}
+
+.user-container {
+    display: flex;
+    width: 420px;
+    justify-content: left;
+    margin-top: 30px;
+    margin-left: 85px;
+}
+.user-container-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 36px;
+}
+
+.user-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#change-profile-image {
+    cursor: pointer;
+    margin-top: 2px;
+    font-family: var(--font);
+    color: #0095F6;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.button {
+    user-select: none;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 149, 246, .4);
+    border-radius: 5px;
+}
+
+.button.highlight {
+    background: #0095F6;
+    cursor: pointer;
+}
+
+#close-button {
+    float: right;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+.profile-photo {
+    position: absolute;
+    z-index: 1001;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    border-radius: 12px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    width: 360px;
+    background: whitesmoke;
+}
+
+.ppt {
+    font-family: var(--font);
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    height: 45px;
+    width: 100%;
+    padding-top: 12px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.profile-photo-text {
+    height: 80px;
+    padding-top: 25px;
+    cursor: unset;
+    font-size: 18px;
+}
+
+.profile-photo-upload {
+    font-size: 14px;
+    color: #0095F6;
+    font-weight: 600;
+}
+
+.profile-photo-delete {
+    font-size: 14px;
+    color: #ED4956;
+    font-weight: 600;
+}
+
+.profile-photo-cancel {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 400;
+    border-bottom: 0;
+}
